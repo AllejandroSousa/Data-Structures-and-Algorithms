@@ -10,6 +10,7 @@ int main() {
     insere_inicio(l1, 3);
     insere_meio(l1, 3, 4);
     insere_meio(l1, 2, 3);
+    insere_meio(l1, 10, 7);
     insere_fim(l1, 10);
     imprime_lista(l1);
     printf("\n");
