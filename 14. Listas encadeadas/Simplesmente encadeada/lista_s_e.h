@@ -3,15 +3,6 @@
 #ifndef LISTA_S_E_H
 #define LISTA_S_E_H
 
-struct no {
-    int info;
-    struct no* prox;
-};
-
-struct lista {
-    struct no* inicio;
-};
-
 typedef struct no No;
 typedef struct lista Lista;
 

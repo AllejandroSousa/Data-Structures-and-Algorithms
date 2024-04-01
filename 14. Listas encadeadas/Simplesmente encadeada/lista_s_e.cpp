@@ -4,6 +4,16 @@
 
 using namespace std;
 
+struct no {
+    int info;
+    struct no* prox;
+};
+
+struct lista {
+    struct no* inicio;
+};
+
+
 No* cria_no(int info) {
     No *no = (No *)malloc(sizeof(No));
     if (!no) return NULL;
