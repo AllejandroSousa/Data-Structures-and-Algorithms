@@ -4,6 +4,15 @@
 
 using namespace std;
 
+struct no {
+    int info;
+    struct no* prox;
+};
+
+struct listac {
+    struct no* acesso;
+};
+
 No* cria_no(int info) {
     No* no = (No*) malloc(sizeof(No));
     if (!no) return NULL;
@@ -63,26 +72,23 @@ bool insere_listac(Listac* l, int info) {
 
 bool remove_listac(Listac* l, int info) {
     if (!l || !l->acesso) return false;
-    if (l->acesso->prox == l->acesso) {
+    if (l->acesso->prox == l->acesso & (l->acesso->info == info)) {
         free(l->acesso);
         l->acesso = NULL;
         return true;
     }
-    if (l->acesso->prox->info == info) {
-        No* aux = l->acesso->prox->prox;
-        free(l->acesso->prox);
-        l->acesso->prox = aux;
-        return true;
-    }
+
     No* aux = l->acesso->prox;
-    while (aux != l->acesso) {
+    do {
         if (aux->prox->info == info) {
             No* aux2 = aux->prox->prox;
+            if (aux->prox == l->acesso) l->acesso = aux2;
             free(aux->prox);
             aux->prox = aux2;
             return true;
         }
-    }
+        aux = aux->prox;
+    } while (aux != l->acesso->prox);
     return false;
 }
 

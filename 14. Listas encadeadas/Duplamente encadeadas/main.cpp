@@ -21,7 +21,6 @@ int main() {
     imprime(l1);
     printf("\n");
     modifica_info(l1, 2, 8);
-    printf("%d ", l1->fim->info);
     imprime(l1);
     printf("\n");
     libera_listad(&l1);

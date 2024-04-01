@@ -4,6 +4,20 @@
 
 using namespace std;
 
+typedef struct nod
+{
+    int info;
+    struct nod *ante;
+    struct nod *prox;
+}Nod;
+
+typedef struct listad
+{
+    struct nod *inicio;
+    struct nod *fim;
+}Listad;
+
+
 Nod *cria_nod(int info)
 {
     Nod *nod = (Nod *)malloc(sizeof(Nod));

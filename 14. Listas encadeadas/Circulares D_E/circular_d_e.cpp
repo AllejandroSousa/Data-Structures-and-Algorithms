@@ -2,6 +2,16 @@
 #include <cstdlib>
 #include "circular_d_e.h"
 
+struct no {
+    int info;
+    struct no* prox;
+    struct no* ante;
+};
+
+struct listacd {
+    struct no* acesso;
+};
+
 No* cria_no(int info) {
     No* no = (No*) malloc(sizeof(No));
     if (!no) return NULL;
@@ -79,6 +89,7 @@ bool remove_listacd(Listacd* l, int info) {
             aux = NULL;
             return true;
         }
+        aux = aux->prox;
     }
     return false;
 }

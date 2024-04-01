@@ -3,19 +3,6 @@
 #ifndef LISTA_D_E_H
 #define LISTA_D_E_H
 
-struct nod
-{
-    int info;
-    struct nod *ante;
-    struct nod *prox;
-};
-
-struct listad
-{
-    struct nod *inicio;
-    struct nod *fim;
-};
-
 typedef struct nod Nod;
 typedef struct listad Listad;
 

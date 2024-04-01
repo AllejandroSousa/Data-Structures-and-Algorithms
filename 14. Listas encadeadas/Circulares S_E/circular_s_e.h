@@ -3,15 +3,6 @@
 #ifndef CIRCULAR_S_E_H
 #define CIRCULAR_S_E_H
 
-struct no {
-    int info;
-    struct no* prox;
-};
-
-struct listac {
-    struct no* acesso;
-};
-
 typedef struct no No;
 typedef struct listac Listac;
 

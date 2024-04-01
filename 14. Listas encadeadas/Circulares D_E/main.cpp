@@ -5,8 +5,12 @@ int main() {
     No* no = cria_no(8);
     Listacd* l = cria_listacd();
     insere_listacd(l, 1);
+    remove_listacd(l, 1);
     insere_listacd(l, 2);
     insere_listacd(l, 3);
+    remove_listacd(l, 3);
+    insere_listacd(l, 4);
+    insere_listacd(l, 5);
     imprime_listacd(l);
     printf("\n");
     remove_listacd(l, 3);
