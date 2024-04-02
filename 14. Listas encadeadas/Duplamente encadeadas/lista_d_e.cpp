@@ -154,3 +154,17 @@ void imprime(Listad* l) {
         aux = aux->prox;
     }
 }
+
+// Abaixo está um exercício feito com uma função que não é essencial para esse TAD,
+// por isso optei por deixá-la comentada.
+
+/* Ex. 11: Implemente as funções para retirar elementos do início e do final de uma lista duplamente encadeada. */
+// void retira_final(Listad *l) {
+//     if (!l || !l->inicio) return;
+    
+//     Nod* aux = l->fim;
+//     l->fim = l->fim->ante;
+//     l->fim->prox = NULL;
+//     free(aux);
+//     aux = NULL;
+// }
